@@ -301,6 +301,15 @@ class DatabaseSeeder extends Seeder
                 "drm_key" => null
             ],
             [
+                "name" => "CAZE TV (1080p)",
+                "logo_url" => "https://images.seeklogo.com/logo-png/61/1/cazetv-logo-png_seeklogo-619708.png",
+                "group" => "Sports",
+                "stream_url" => "https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.m3u8",
+                "type" => "hls",
+                "drm_kid" => null,
+                "drm_key" => null
+            ],
+            [
                 "name" => "CTV",
                 "logo_url" => "https://images.fotmob.com/image_resources/logo/teamlogo/8570.png",
                 "group" => "FIFA",
