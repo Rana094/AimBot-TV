@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
                 "name" => "BEIN Sports 5",
                 "logo_url" => "https://carboncredits.com/wp-content/uploads/2025/09/shutterstock_2306088965-e1757112807302.jpg",
                 "group" => "BeIN",
-                "stream_url" => "http://starhub.pro/live/farhat-3379/67897-913379/744527.ts",
+                "stream_url" => "https://starhub.pro/live/farhat-3379/67897-913379/744527.ts",
                 "type" => "hls",
                 "drm_kid" => null,
                 "drm_key" => null
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
                 "name" => "BeIN Sports 1",
                 "logo_url" => "https://elmarada.org/wp-content/uploads/2022/03/download-247x200.png",
                 "group" => "BeIN",
-                "stream_url" => "http://41.205.70.146/BEINSPORT1/index.m3u8",
+                "stream_url" => "https://41.205.70.146/BEINSPORT1/index.m3u8",
                 "type" => "hls",
                 "drm_kid" => null,
                 "drm_key" => null
@@ -84,7 +84,7 @@ class DatabaseSeeder extends Seeder
                 "name" => "BeIN Sports 2",
                 "logo_url" => "https://elmarada.org/wp-content/uploads/2022/03/download-247x200.png",
                 "group" => "BeIN",
-                "stream_url" => "http://41.205.70.146/BEINSPORT2/index.m3u8",
+                "stream_url" => "https://41.205.70.146/BEINSPORT2/index.m3u8",
                 "type" => "hls",
                 "drm_kid" => null,
                 "drm_key" => null
@@ -93,7 +93,7 @@ class DatabaseSeeder extends Seeder
                 "name" => "BeIN Sports 5",
                 "logo_url" => "https://elmarada.org/wp-content/uploads/2022/03/download-247x200.png",
                 "group" => "BeIN",
-                "stream_url" => "http://41.205.70.146/BEINSPORT5/index.m3u8",
+                "stream_url" => "https://41.205.70.146/BEINSPORT5/index.m3u8",
                 "type" => "hls",
                 "drm_kid" => null,
                 "drm_key" => null
@@ -129,7 +129,7 @@ class DatabaseSeeder extends Seeder
                 "name" => "D Sports (Alt)",
                 "logo_url" => "https://images.seeklogo.com/logo-png/62/1/dsports-logo-png_seeklogo-626310.png",
                 "group" => "D Sports",
-                "stream_url" => "http://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd",
+                "stream_url" => "https://otte.live.fly.ww.aiv-cdn.net/lhr-nitro/live/dash/enc/rgilyeubta/out/v1/09a67027b18f4fd78aaa3794a2aacfe8/cenc.mpd",
                 "type" => "dash",
                 "drm_kid" => "03f12d6a3dbfd3a6fa7dd7f6417e0c11",
                 "drm_key" => "ea07b87acdf2e45be824cde4a1cf3504"
@@ -201,7 +201,7 @@ class DatabaseSeeder extends Seeder
                 "name" => "SERVER 3",
                 "logo_url" => "https://images.fotmob.com/image_resources/logo/teamlogo/8263.png",
                 "group" => "Server",
-                "stream_url" => "http://193.47.62.55/hls/Xlplplpqqq.m3u8",
+                "stream_url" => "https://193.47.62.55/hls/Xlplplpqqq.m3u8",
                 "type" => "hls",
                 "drm_kid" => null,
                 "drm_key" => null
