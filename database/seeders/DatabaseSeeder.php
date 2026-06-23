@@ -18,20 +18,24 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Admin
-        User::create([
-            'name' => 'Aimbot Admin',
-            'email' => 'admin@aimbot.tv',
-            'password' => Hash::make('admin123'),
-            'role' => 'admin',
-        ]);
+        User::updateOrCreate(
+            ['email' => 'admin@aimbot.tv'],
+            [
+                'name' => 'Aimbot Admin',
+                'password' => Hash::make('admin123'),
+                'role' => 'admin',
+            ]
+        );
 
         // Standard User
-        User::create([
-            'name' => 'John Doe',
-            'email' => 'user@aimbot.tv',
-            'password' => Hash::make('user123'),
-            'role' => 'user',
-        ]);
+        User::updateOrCreate(
+            ['email' => 'user@aimbot.tv'],
+            [
+                'name' => 'John Doe',
+                'password' => Hash::make('user123'),
+                'role' => 'user',
+            ]
+        );
 
         // Complete user-requested channel list
         $channels = [
@@ -470,7 +474,10 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($channels as $chan) {
-            Channel::create($chan);
+            Channel::updateOrCreate(
+                ['name' => $chan['name']],
+                $chan
+            );
         }
     }
 }
