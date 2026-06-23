@@ -479,6 +479,78 @@ class DatabaseSeeder extends Seeder
                 "type" => "hls",
                 "drm_kid" => null,
                 "drm_key" => null
+            ],
+            [
+                "name" => "D Sports HD",
+                "logo_url" => "https://i.imgur.com/12yqgbL.png",
+                "group" => "D Sports",
+                "stream_url" => "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/3gg2jnixjn/out/v1/e1840e01f3f14563b66bbb944d5cc54c/cenc.mpd",
+                "type" => "dash",
+                "drm_kid" => "f8b207c10f3f76aeba32a360ec52b9e4",
+                "drm_key" => "afad49d20eb39670e93e371c1d669921"
+            ],
+            [
+                "name" => "TSN Sports 4 - English",
+                "logo_url" => "https://i.imgur.com/qJyAWU8.png",
+                "group" => "TSN",
+                "stream_url" => "https://otte-qw.live.pv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd?Null",
+                "type" => "dash",
+                "drm_kid" => "14eeabf30c14b7fbf3008c03099ce011",
+                "drm_key" => "17d2ac8dbc5429bd70af3433aa12158d"
+            ],
+            [
+                "name" => "TELEMUNDO FHD",
+                "logo_url" => "https://www.bellmedia.ca/lede/wp-content/uploads/2024/09/18581592_10155403529061055_8240563011649656197_n.jpg",
+                "group" => "TELEMUNDO",
+                "stream_url" => "https://cun-live1-ott.izzigo.tv/out/u/dash/NOG1/TELEMUNDO-ARIZONA-USA-TCS-HD/default.mpd",
+                "type" => "dash",
+                "drm_kid" => "1efe4add8fdf327c5f8d2a1c195e5c71",
+                "drm_key" => "4f50e6f011e60ca01ee561f27187e78f"
+            ],
+            [
+                "name" => "TRT SPORTS 2K",
+                "logo_url" => "",
+                "group" => "TRT",
+                "stream_url" => "https://rxne77juptdeyke3tytvgqwyh.medya.trt.com.tr/master.m3u8",
+                "type" => "hls",
+                "drm_kid" => null,
+                "drm_key" => null
+            ],
+            [
+                "name" => "IRIB 4K",
+                "logo_url" => "",
+                "group" => "IRIB",
+                "stream_url" => "https://ncdn.telewebion.ir/faratar/live/playlist.m3u8",
+                "type" => "hls",
+                "drm_kid" => null,
+                "drm_key" => null
+            ],
+            [
+                "name" => "TVP SPORTS FHD",
+                "logo_url" => "",
+                "group" => "TVP",
+                "stream_url" => "https://estreams.tv.nej.cz/dash/CH_TVP_SPORT_Portable.ism/playlist.mpd",
+                "type" => "dash",
+                "drm_kid" => "0",
+                "drm_key" => "0"
+            ],
+            [
+                "name" => "JOJ SPORTS FHD",
+                "logo_url" => "",
+                "group" => "JOJ",
+                "stream_url" => "https://dash2.antik.sk/stream/nvidia_joj_sport/playlist_cenc.mpd",
+                "type" => "dash",
+                "drm_kid" => "11223344556677889900112233445566",
+                "drm_key" => "4b80724d0ef86bcb2c21f7999d67739d"
+            ],
+            [
+                "name" => "ARABIC LIVE HD",
+                "logo_url" => "",
+                "group" => "ARABIC",
+                "stream_url" => "https://43cup.s3.us-east-2.amazonaws.com/max4/master.m3u8",
+                "type" => "hls",
+                "drm_kid" => null,
+                "drm_key" => null
             ]
         ];
 

@@ -36,10 +36,20 @@ class AdminController extends Controller
             'is_active' => 'nullable|boolean',
         ]);
 
+        $streamUrl = trim($request->stream_url);
+        if (str_starts_with($streamUrl, 'http://')) {
+            $streamUrl = 'https://' . substr($streamUrl, 7);
+        }
+
+        $logoUrl = $request->logo_url ? trim($request->logo_url) : null;
+        if ($logoUrl && str_starts_with($logoUrl, 'http://')) {
+            $logoUrl = 'https://' . substr($logoUrl, 7);
+        }
+
         Channel::create([
             'name' => $request->name,
-            'logo_url' => $request->logo_url,
-            'stream_url' => $request->stream_url,
+            'logo_url' => $logoUrl,
+            'stream_url' => $streamUrl,
             'group' => $request->group,
             'type' => $request->type,
             'drm_kid' => $request->drm_kid,
@@ -71,13 +81,16 @@ class AdminController extends Controller
                 // Extract logo
                 $logoUrl = null;
                 if (preg_match('/tvg-logo=["\']([^"\']+)["\']/i', $line, $matches)) {
-                    $logoUrl = $matches[1];
+                    $logoUrl = trim($matches[1]);
+                    if (str_starts_with($logoUrl, 'http://')) {
+                        $logoUrl = 'https://' . substr($logoUrl, 7);
+                    }
                 }
                 
                 // Extract group
                 $group = null;
                 if (preg_match('/group-title=["\']([^"\']+)["\']/i', $line, $matches)) {
-                    $group = $matches[1];
+                    $group = trim($matches[1]);
                 }
                 
                 // Extract name
@@ -86,7 +99,7 @@ class AdminController extends Controller
                 if ($commaPos !== false) {
                     $name = trim(substr($line, $commaPos + 1));
                 } elseif (preg_match('/tvg-name=["\']([^"\']+)["\']/i', $line, $matches)) {
-                    $name = $matches[1];
+                    $name = trim($matches[1]);
                 }
                 
                 $currentChannel = [
@@ -102,10 +115,15 @@ class AdminController extends Controller
                         $type = 'dash';
                     }
                     
+                    $streamUrl = trim($line);
+                    if (str_starts_with($streamUrl, 'http://')) {
+                        $streamUrl = 'https://' . substr($streamUrl, 7);
+                    }
+                    
                     Channel::create([
                         'name' => $currentChannel['name'],
                         'logo_url' => $currentChannel['logo_url'],
-                        'stream_url' => $line,
+                        'stream_url' => $streamUrl,
                         'group' => $currentChannel['group'],
                         'type' => $type,
                         'is_active' => true,
